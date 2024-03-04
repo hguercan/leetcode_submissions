@@ -5,7 +5,5 @@ class Solution(object):
         :type word2: List[str]
         :rtype: bool
         """
-        joined_word_one = "".join(word1)
-        joined_word_two = "".join(word2)
-        return joined_word_one == joined_word_two
+        return "".join(word1) == "".join(word2)
         
