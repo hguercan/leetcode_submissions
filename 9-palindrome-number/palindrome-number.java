@@ -11,8 +11,11 @@ class Solution {
         else {
             var firstLetter = candidate.charAt(0);
             var lastLetter = candidate.charAt(length-1);
+            if (firstLetter != lastLetter) 
+                return false;
+            
             var innerWord = (length > 2) ? candidate.substring(1, length - 1) : "";
-            return firstLetter != lastLetter ? false : isPalindromeCheck(innerWord);
+            return isPalindromeCheck(innerWord);
         }
     }
 }
