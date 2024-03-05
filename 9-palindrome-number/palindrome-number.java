@@ -14,8 +14,7 @@ class Solution {
             if (firstLetter != lastLetter) 
                 return false;
             
-            //var innerWord = (length > 2) ? candidate.substring(1, length - 1) : "";
-            var innerWord = candidate.substring(1, length - 1);
+            var innerWord = (length > 2) ? candidate.substring(1, length - 1) : "";
             return isPalindromeCheck(innerWord);
         }
     }
