@@ -10,16 +10,16 @@ func hasCycle(head *ListNode) bool {
         return false
     }
 
-    seenNodes := map[*ListNode]bool{}
+    slow := head
+    fast := head.Next
 
-    currNode := head
-    for currNode.Next != nil {
-        seenNodes[currNode] = true
-        _, ok := seenNodes[currNode.Next]
-        if ok {
+    for fast != nil && fast.Next != nil {
+        if slow == fast {
             return true
         }
-        currNode = currNode.Next;
+
+        slow = slow.Next
+        fast = fast.Next.Next
     }
     return false
 }
