@@ -10,6 +10,7 @@
  */
 class Solution {
     public ListNode middleNode(ListNode head) {
+        //second solution which slow and fast algorithm
         if (head.next == null) {
             return head;
         } else if (head.next.next == null) {
@@ -27,6 +28,7 @@ class Solution {
 
 
         /*
+        //first solution
         int counter = 0;
         ListNode currNode = head;
         while(currNode.next != null) {
