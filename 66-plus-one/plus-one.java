@@ -7,7 +7,7 @@ class Solution {
     private int[] incrementDigit(int[] digits, int digit, int currIndex) {
         var incrementedValue = digit + 1;
         if(incrementedValue >= 10) {
-                digits[currIndex] = incrementedValue % 10;
+                digits[currIndex] = 0;
                 var nextIndex = currIndex - 1;
                 if(nextIndex == -1) {
                     int[] newDigits = new int[digits.length+1];
