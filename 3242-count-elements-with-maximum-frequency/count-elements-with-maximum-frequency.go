@@ -5,18 +5,13 @@ func maxFrequencyElements(nums []int) int {
         return 1
     }
 
+    var maxFrequency int = 1
     frequencyDict := make(map[int]int)
     for _, num := range nums {
-        frequencyDict[num] = frequencyDict[num] + 1
-    }
-    return sumOfElementsWithMaxFrequency(frequencyDict)
-}
-
-func sumOfElementsWithMaxFrequency(frequencyDict map[int]int) int {
-    var maxFrequency int = 1
-    for _, frequency := range frequencyDict {
-        if frequency > maxFrequency {
-            maxFrequency = frequency
+        incrementedFrequency := frequencyDict[num] + 1
+        frequencyDict[num] = incrementedFrequency
+        if incrementedFrequency > maxFrequency {
+            maxFrequency = incrementedFrequency
         }
     }
 
