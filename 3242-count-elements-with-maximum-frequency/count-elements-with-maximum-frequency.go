@@ -9,10 +9,10 @@ func maxFrequencyElements(nums []int) int {
     for _, num := range nums {
         frequencyDict[num] = frequencyDict[num] + 1
     }
-    return countElementsWithMaxFrequency(frequencyDict)
+    return sumOfElementsWithMaxFrequency(frequencyDict)
 }
 
-func countElementsWithMaxFrequency(frequencyDict map[int]int) int {
+func sumOfElementsWithMaxFrequency(frequencyDict map[int]int) int {
     var maxFrequency int = 1
     for _, frequency := range frequencyDict {
         if frequency > maxFrequency {
